@@ -1,15 +1,11 @@
-import { ButtonHTMLAttributes } from 'react'
-
-import { styles } from './styles'
-
+import { ButtonHTMLAttributes } from "react";
+import { btn, primary } from "./css";
 
 type Props = ButtonHTMLAttributes<HTMLButtonElement> & {
-  size: string
-} 
-
+  size: string;
+};
 
 export const Button = (props: Props) => {
-  return (
-    <button css={styles.primary}>Button</button>
-  )
-}
+  console.log("Hello");
+  return <button css={[btn, primary]}>Button</button>;
+};
