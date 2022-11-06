@@ -1,0 +1,12 @@
+{
+    "plugins": ["simple-import-sort", "import", "unused-imports"],
+    "rules": {
+        "simple-import-sort/imports": "error", // importのsortルールを設定
+        "simple-import-sort/exports": "error", // exportのsortルールを設定
+        "import/first": "error", // すべてのimportがファイルの先頭にあることを確認
+        "import/newline-after-import": "error", // import後に改行があることを確認
+        "import/no-duplicates": "error", // 同じファイルのimportをマージ
+        "unused-imports/no-unused-imports": "error" // 未使用のimport文を削除
+    },
+    "parser": "@typescript-eslint/parser"
+}

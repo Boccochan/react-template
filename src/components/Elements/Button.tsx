@@ -1,8 +1,10 @@
 import { ButtonHTMLAttributes } from 'react'
+
 import { styles } from './styles'
 
 
 type Props = ButtonHTMLAttributes<HTMLButtonElement> & {
+  size: string
 } 
 
 
