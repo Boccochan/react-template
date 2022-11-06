@@ -1,5 +1,11 @@
 {
     "recommendations": [
-        "dbaeumer.vscode-eslint"
+        "dbaeumer.vscode-eslint",
+        "rvest.vs-code-prettier-eslint",
+        "styled-components.vscode-styled-components",
+        "dsznajder.es7-react-js-snippets",
+        "ms-vscode.vscode-typescript-next",
+        "njpwerner.autodocstring",
+        "esbenp.prettier-vscode"
     ]
 }

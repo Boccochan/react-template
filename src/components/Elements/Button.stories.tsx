@@ -1,9 +1,8 @@
-import { Button } from './Button'
-
+import { Button } from "./Button";
 
 export default {
-    title: 'Button',
-    component: Button
-}
+  title: "Button",
+  component: Button,
+};
 
-export const SimpleButton = () => <Button />
+export const SimpleButton = () => <Button size="hoge" />;
