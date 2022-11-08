@@ -1,12 +1,24 @@
-{
-    "plugins": ["simple-import-sort", "import", "unused-imports"],
+{    
     "rules": {
-        "simple-import-sort/imports": "error", // importのsortルールを設定
-        "simple-import-sort/exports": "error", // exportのsortルールを設定
-        "import/first": "error", // すべてのimportがファイルの先頭にあることを確認
-        "import/newline-after-import": "error", // import後に改行があることを確認
-        "import/no-duplicates": "error", // 同じファイルのimportをマージ
-        "unused-imports/no-unused-imports": "error" // 未使用のimport文を削除
+        "simple-import-sort/imports": "error",
+        "simple-import-sort/exports": "error",
+        "import/first": "error",
+        "import/newline-after-import": "error",
+        "import/no-duplicates": "error",
+        "unused-imports/no-unused-imports": "error",
+        "react/jsx-uses-react": "off",
+        "react/react-in-jsx-scope": "off",
+        "react/no-unknown-property": ["error", { "ignore": ["css"] }]
     },
-    "parser": "@typescript-eslint/parser"
+    "extends": ["eslint:recommended", "plugin:react/recommended"],
+    "plugins": ["simple-import-sort", "import", "unused-imports"],
+    "parser": "@typescript-eslint/parser",
+    "overrides": [
+        {
+            "files": ["*.ts", "*.tsx"],
+            "rules": {
+                "no-undef": "off"
+            }
+        }
+    ]
 }
