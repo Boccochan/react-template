@@ -1,24 +1,29 @@
-{    
-    "rules": {
-        "simple-import-sort/imports": "error",
-        "simple-import-sort/exports": "error",
-        "import/first": "error",
-        "import/newline-after-import": "error",
-        "import/no-duplicates": "error",
-        "unused-imports/no-unused-imports": "error",
-        "react/jsx-uses-react": "off",
-        "react/react-in-jsx-scope": "off",
-        "react/no-unknown-property": ["error", { "ignore": ["css"] }]
-    },
-    "extends": ["eslint:recommended", "plugin:react/recommended"],
-    "plugins": ["simple-import-sort", "import", "unused-imports"],
-    "parser": "@typescript-eslint/parser",
-    "overrides": [
-        {
-            "files": ["*.ts", "*.tsx"],
-            "rules": {
-                "no-undef": "off"
-            }
-        }
+{
+  "plugins": ["simple-import-sort", "import", "unused-imports", "filenames"],
+  "rules": {
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+    "import/first": "error",
+    "import/newline-after-import": "error",
+    "import/no-duplicates": "error",
+    "unused-imports/no-unused-imports": "error",
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/no-unknown-property": ["error", { "ignore": ["css"] }],
+    "filenames/match-regex": [
+      2,
+      "(index.*)|(css.*)|(vite-env.d)|(^[A-Z](([a-z0-9]+[A-Z]?)*))",
+      true
     ]
+  },
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "parser": "@typescript-eslint/parser",
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {
+        "no-undef": "off"
+      }
+    }
+  ]
 }
